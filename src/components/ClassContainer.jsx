@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, makeStyles, Typography } from "@material-ui/core";
 import ClassCard from "./ClassCard";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { lectures } from "../data/lectures";
 import getToday from "../helpers/weekDay";
 
@@ -88,6 +89,7 @@ const ClassContainer = () => {
           </div>
         )}
       </Container>
+      <Footer />
     </div>
   );
 };
