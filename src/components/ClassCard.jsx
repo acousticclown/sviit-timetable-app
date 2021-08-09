@@ -130,11 +130,7 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
             </div>
           }
         />
-        <CardMedia
-          className={classes.media}
-          image={imageUrl}
-          title="Paella dish"
-        />
+        <CardMedia className={classes.media} image={imageUrl} title={name} />
         <Button
           className={classes.button}
           classes={{ disabled: classes.disabledButton }}
