@@ -111,7 +111,7 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
         break;
       case "n":
         setImageUrl(
-          "https://marvel-b1-cdn.bc0a.com/f00000000173332/www.openlogic.com/sites/openlogic/files/image/2019-07/image-blog-big-data-on-demand-with-mongodb.jpg"
+          "https://upload.wikimedia.org/wikipedia/commons/3/32/Mongo-db-logo.png"
         );
         break;
       case "c":
