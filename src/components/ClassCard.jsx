@@ -73,26 +73,23 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
   let [startTime, startHour, startMinute] = formatDate(start);
   let [endTime, endHour, endMinute] = formatDate(end);
 
-  console.log(nowHour, nowMinute, startHour, startMinute, endHour, endMinute);
+  console.log(nowHour, startHour);
 
   useEffect(() => {
-    if (nowHour > endHour) {
-      if (nowMinute > endMinute) {
-        setStatus("CLASS ENDED");
-      }
-    }
     if (nowHour < startHour) {
-      if (nowMinute < startMinute) {
-        setStatus("NOT STARTED YET");
+      setStatus("NOT STARTED YET");
+    } else if (
+      nowHour == startHour &&
+      nowMinute >= startMinute &&
+      nowMinute <= endMinute
+    ) {
+      if (!link) {
+        setStatus("NO LINK PROVIDED");
+      } else {
+        setActive(false);
       }
-    }
-    if (nowHour >= startHour && nowHour <= endHour) {
-      if (nowMinute >= startMinute && nowMinute <= endMinute) {
-        if (!link) {
-          setStatus("NO LINK PROVIDED");
-        }
-      }
-      setActive(false);
+    } else {
+      setStatus("CLASS ENDED");
     }
 
     if (active) {

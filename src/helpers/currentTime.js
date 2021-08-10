@@ -13,7 +13,7 @@ export default function formatDate(date) {
     }
     else{
         if(h == 12){
-            h = 12;
+            h = "12";
         }
         else{
             h = h - 12;
@@ -35,6 +35,13 @@ export function formatNow(){
 
     let h = now.getHours().toString();
     let m = now.getMinutes().toString();
+
+    if(h < 10){
+        h = "0" + h;
+    }
+    if(m < 10){
+        m = "0" + m;
+    }
 
     return [h, m];
 }
