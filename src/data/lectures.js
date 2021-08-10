@@ -20,10 +20,10 @@ export const lectures = {
         tuesday: {
             holiday: false,
             data: [
-                {sid: "h", name: "Human Values", start: "10:30 AM", end: "11:15 AM", teacher: "Prof. Anil Jain", code: "BBAI-501", link: ""},
-                {sid: "c", name: "Compiler Design", start: "11:15 AM", end: "12:00 PM", teacher: "Mr. Juber Mirza", code: "BTCS-601", link: "https://teams.microsoft.com/l/meetup-join/19%3a37cbfc140f9b44f98d3f91c35f49f547%40thread.tacv2/1628162023580?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"}, 
-                {sid: "d", name: "Deep Learning", start: "12:00 PM", end: "12:45 PM", teacher: "Mr. Sachin Chirgaiya", code: "BTIBMA-702", link: "https://teams.microsoft.com/l/meetup-join/19%3a1116e3a8f3244079be27874a97532531%40thread.tacv2/1628489298753?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2212231dc6-fc78-4fa4-8c57-639502dde17b%22%7d"},  
-                {sid: "n", name: "NoSQL", start: "12:45 PM", end: "01:15 PM", teacher: "Ms. Archana Choubey", code: "BTIBM-701(P)", link: ""},
+                {sid: "h", name: "Human Values", start: "10:30", end: "11:15", teacher: "Prof. Anil Jain", code: "BBAI-501", link: ""},
+                {sid: "c", name: "Compiler Design", start: "11:15", end: "12:00", teacher: "Mr. Juber Mirza", code: "BTCS-601", link: "https://teams.microsoft.com/l/meetup-join/19%3a37cbfc140f9b44f98d3f91c35f49f547%40thread.tacv2/1628162023580?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"}, 
+                {sid: "d", name: "Deep Learning", start: "12:00", end: "12:45", teacher: "Mr. Sachin Chirgaiya", code: "BTIBMA-702", link: "https://teams.microsoft.com/l/meetup-join/19%3a1116e3a8f3244079be27874a97532531%40thread.tacv2/1628489298753?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2212231dc6-fc78-4fa4-8c57-639502dde17b%22%7d"},  
+                {sid: "n", name: "NoSQL", start: "12:45", end: "13:15", teacher: "Ms. Archana Choubey", code: "BTIBM-701(P)", link: ""},
             ]
         },
         wednesday: {

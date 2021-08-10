@@ -9,7 +9,7 @@ import {
   Box,
 } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import formatDate from "../helpers/currentTime";
+import formatDate, { formatNow } from "../helpers/currentTime";
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -51,6 +51,14 @@ const useStyles = makeStyles((theme) => ({
       color: "#f00",
     },
   },
+  link: {
+    textDecoration: "none",
+    width: "100%",
+    height: "3rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 }));
 
 const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
@@ -59,22 +67,38 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
   const [active, setActive] = useState(true);
   const [status, setStatus] = useState("ENTER CLASS");
   const [imageUrl, setImageUrl] = useState("");
+  const [linkColor, setLinkColor] = useState("#fff");
 
-  let time = new Date().getTime();
-  let nowTime = formatDate(time);
+  let [nowHour, nowMinute] = formatNow();
+  let [startTime, startHour, startMinute] = formatDate(start);
+  let [endTime, endHour, endMinute] = formatDate(end);
+
+  console.log(nowHour, nowMinute, startHour, startMinute, endHour, endMinute);
 
   useEffect(() => {
-    if (nowTime > end) {
-      setStatus("CLASS ENDED");
+    if (nowHour > endHour) {
+      if (nowMinute > endMinute) {
+        setStatus("CLASS ENDED");
+      }
     }
-    if (nowTime < start) {
-      setStatus("NOT STARTED YET");
+    if (nowHour < startHour) {
+      if (nowMinute < startMinute) {
+        setStatus("NOT STARTED YET");
+      }
     }
-    if (nowTime >= start && nowTime <= end) {
-      if (!link) {
-        setStatus("NO LINK PROVIDED");
+    if (nowHour >= startHour && nowHour <= endHour) {
+      if (nowMinute >= startMinute && nowMinute <= endMinute) {
+        if (!link) {
+          setStatus("NO LINK PROVIDED");
+        }
       }
       setActive(false);
+    }
+
+    if (active) {
+      setLinkColor("#3f50b5");
+    } else {
+      setLinkColor("#fff");
     }
 
     switch (id) {
@@ -106,7 +130,7 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
           "https://cdn.collegeraptor.com/wp/wp-content/uploads/2017/09/09204206/study-tips-e1580315200491.png"
         );
     }
-  }, []);
+  }, [active]);
 
   return (
     <Box boxShadow={3} className={classes.box}>
@@ -117,7 +141,7 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <Typography className={classes.subColor}>{name}</Typography>
               <Typography className={classes.subColorSml}>
-                {start} - {end}
+                {startTime} - {endTime}
               </Typography>
             </div>
           }
@@ -140,7 +164,16 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
           //   endIcon={<ArrowForwardIosIcon className={classes.arrow} />}
           disabled={active}
         >
-          {status}
+          <a
+            className={classes.link}
+            style={{
+              color: linkColor,
+            }}
+            href={link}
+            target="_blank"
+          >
+            {status}
+          </a>
         </Button>
       </Card>
     </Box>

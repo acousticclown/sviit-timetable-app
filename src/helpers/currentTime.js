@@ -1,20 +1,40 @@
 export default function formatDate(date) {
+    let [h, m] = date.split(":");
+
+    let med;
+
+    if(h < 12)
+    {
+        if(h < 10)
+        {
+            h = "0" + h; 
+        }
+        med = " AM";
+    }
+    else{
+        if(h == 12){
+            h = 12;
+        }
+        else{
+            h = h - 12;
+        }
+        if(h < 10)
+        {
+            h = "0" + h; 
+        }
+        med = " PM";
+    }
+
+    let formattedDate = h + ":" + m + med;
+
+    return [formattedDate, h, m];
+  };
+
+export function formatNow(){
     var now = new Date();
 
-    var h = now.getHours();
-    var m = now.getMinutes();
+    let h = now.getHours().toString();
+    let m = now.getMinutes().toString();
 
-    if(h < 10)
-    {
-        h = "0" + h;
-    }
-    
-    if(m < 10)
-    {
-        m = "0" + m;
-    }
-
-    let formattedDate = (h >= 12) ? (h-12 + ':' + m +' PM') : (h + ':' + m +' AM');;
-
-    return formattedDate;
-  };
+    return [h, m];
+}
