@@ -1,6 +1,10 @@
 export default function formatDate(date) {
     let [h, m] = date.split(":");
 
+    let time = (parseInt(h) * 60) + parseInt(m);
+
+    console.log(h);
+
     let med;
 
     if(h < 12)
@@ -27,7 +31,7 @@ export default function formatDate(date) {
 
     let formattedDate = h + ":" + m + med;
 
-    return [formattedDate, h, m];
+    return [formattedDate, time];
   };
 
 export function formatNow(){
@@ -36,6 +40,8 @@ export function formatNow(){
     let h = now.getHours().toString();
     let m = now.getMinutes().toString();
 
+    let time = (parseInt(h) * 60) + parseInt(m);
+
     if(h < 10){
         h = "0" + h;
     }
@@ -43,5 +49,5 @@ export function formatNow(){
         m = "0" + m;
     }
 
-    return [h, m];
+    return [time];
 }

@@ -69,26 +69,20 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
   const [imageUrl, setImageUrl] = useState("");
   const [linkColor, setLinkColor] = useState("#fff");
 
-  let [nowHour, nowMinute] = formatNow();
-  let [startTime, startHour, startMinute] = formatDate(start);
-  let [endTime, endHour, endMinute] = formatDate(end);
-
-  console.log(nowHour, startHour);
+  let [nowT] = formatNow();
+  let [startTime, startT] = formatDate(start);
+  let [endTime, endT] = formatDate(end);
 
   useEffect(() => {
-    if (nowHour < startHour) {
+    if (nowT < startT) {
       setStatus("NOT STARTED YET");
-    } else if (
-      nowHour == startHour &&
-      nowMinute >= startMinute &&
-      nowMinute <= endMinute
-    ) {
+    } else if (nowT > endT) {
+      setStatus("CLASS ENDED");
+    } else {
       if (!link) {
         setStatus("NO LINK PROVIDED");
       }
       setActive(false);
-    } else {
-      setStatus("CLASS ENDED");
     }
 
     if (active) {
@@ -126,7 +120,7 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
           "https://cdn.collegeraptor.com/wp/wp-content/uploads/2017/09/09204206/study-tips-e1580315200491.png"
         );
     }
-  }, [active]);
+  }, [active, start, end]);
 
   return (
     <Box boxShadow={3} className={classes.box}>
