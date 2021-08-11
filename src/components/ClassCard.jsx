@@ -85,9 +85,8 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
     ) {
       if (!link) {
         setStatus("NO LINK PROVIDED");
-      } else {
-        setActive(false);
       }
+      setActive(false);
     } else {
       setStatus("CLASS ENDED");
     }
