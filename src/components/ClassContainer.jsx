@@ -8,6 +8,7 @@ import getToday from "../helpers/weekDay";
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    minHeight: "80vh",
     marginTop: 20,
     display: "flex",
     flexWrap: "wrap",

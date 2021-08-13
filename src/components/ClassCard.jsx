@@ -8,12 +8,12 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import formatDate, { formatNow } from "../helpers/currentTime";
 
 const useStyles = makeStyles((theme) => ({
   box: {
     margin: 15,
+    height: "100%",
   },
   root: {
     width: 300,
@@ -144,7 +144,9 @@ const ClassCard = ({ id, name, start, end, subjectCode, teacher, link }) => {
             </div>
           }
         />
-        <CardMedia className={classes.media} image={imageUrl} title={name} />
+        {imageUrl ? (
+          <CardMedia className={classes.media} image={imageUrl} title={name} />
+        ) : null}
         <Button
           className={classes.button}
           classes={{ disabled: classes.disabledButton }}

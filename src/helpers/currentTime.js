@@ -3,8 +3,6 @@ export default function formatDate(date) {
 
     let time = (parseInt(h) * 60) + parseInt(m);
 
-    console.log(h);
-
     let med;
 
     if(h < 12)
