@@ -1,8 +1,15 @@
 {
     "name": "SVIIT Timetable",
     "short_name": "SVIIT Lectures",
-    "start_url": "/?home=true",
-    "icons":[{
+    "start_url": ".",
+    "icons":[
+      {
+        "src": "src/assets/icons/maskable_icon.png",
+        "sizes": "196x196",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+      ,{
         "src": "src/assets/icons/manifest-icon-192.png",
         "sizes": "192x192",
         "type": "image/png",
@@ -16,6 +23,6 @@
       }],
     "theme_color": "#000000",
     "background_color": "#FFFFFF",
-    "display": "fullscreen",
-    "orientation": "portrait"
+    "display": "standalone",
+    "scope": "/"
 }
