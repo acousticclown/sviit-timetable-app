@@ -11,7 +11,7 @@ export const lectures = {
         monday: {
             holiday: false,
             data:[
-                {sid: "h", name: "Human Values", start: "10:30", end: "11:15", teacher: "Prof. Anil Jain", code: "BBAI-501", link: ""},
+                {sid: "h", name: "Human Values", start: "10:30", end: "11:15", teacher: "Prof. Anil Jain", code: "BBAI-501", link: "https://teams.microsoft.com/l/meetup-join/19%3ad61f66fb8cbd4ac9bd84c7c627d5f2cd%40thread.tacv2/1629087739174?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225a5d1d21-8e1b-4c87-96e4-60dece011c7a%22%7d"},
                 {sid: "i", name: "IOT", start: "11:15", end: "12:00", teacher: "Ms. Ramanpreet", code: "BTIBM-402(P)", link: ""}, 
                 {sid: "i", name: "IOT", start: "12:00", end: "12:45", teacher: "Ms. Ramanpreet", code: "BTIBM-402", link: ""},  
                 {sid: "n", name: "NoSQL", start: "12:45", end: "13:15", teacher: "Ms. Archana Choubey", code: "BTIBM-701", link: ""},  
