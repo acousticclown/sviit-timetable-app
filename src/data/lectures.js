@@ -29,7 +29,7 @@ export const lectures = {
         wednesday: {
             holiday: false,
             data:[
-                {sid: "c", name: "Compiler Design", start: "10:30", end: "11:15", teacher: "Mr. Juber Mirza", code: "BTCS-601", link: ""},
+                {sid: "c", name: "Compiler Design", start: "10:30", end: "11:15", teacher: "Mr. Juber Mirza", code: "BTCS-601", link: "https://teams.microsoft.com/l/meetup-join/19%3a37cbfc140f9b44f98d3f91c35f49f547%40thread.tacv2/1629263122589?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"},
                 {sid: "i", name: "IOT", start: "11:15", end: "12:00", teacher: "Ms. Ramanpreet", code: "BTIBM-402", link: ""}, 
                 {sid: "c", name: "Compiler Design", start: "12:00", end: "12:45 PM", teacher: "Mr. Juber Mirza", code: "BTCS-601(Tut)", link: "https://teams.microsoft.com/l/meetup-join/19%3a37cbfc140f9b44f98d3f91c35f49f547%40thread.tacv2/1628162296063?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"},  
                 {sid: "n", name: "NoSQL", start: "12:45", end: "13:30", teacher: "Ms. Priti Shukla", code: "BTIBM-701", link: ""},
