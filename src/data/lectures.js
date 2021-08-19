@@ -38,7 +38,7 @@ export const lectures = {
         thursday: {
             holiday: false,
             data: [
-                {sid: "h", name: "Human Values", start: "10:30", end: "11:15", teacher: "Prof. Anil Jain", code: "BBAI-501", link: ""},
+                {sid: "h", name: "Human Values", start: "10:30", end: "11:15", teacher: "Prof. Anil Jain", code: "BBAI-501", link: "https://teams.microsoft.com/l/meetup-join/19%3ad61f66fb8cbd4ac9bd84c7c627d5f2cd%40thread.tacv2/1629092728646?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225a5d1d21-8e1b-4c87-96e4-60dece011c7a%22%7d"},
                 {sid: "i", name: "IOT", start: "11:15 AM", end: "12:00", teacher: "Ms. Ramanpreet", code: "BTIBM-402(P)", link: "https://teams.microsoft.com/l/meetup-join/19:1116e3a8f3244079be27874a97532531@thread.tacv2/1628746868711?context=%7B%22Tid%22:%22783ff96b-fe13-406b-b48d-45dc1853cbad%22,%22Oid%22:%22e49e4ec0-c41f-4d4c-96df-aa4a6a5cf189%22%7D"}, 
                 {sid: "c", name: "Compiler Design", start: "12:00", end: "12:45", teacher: "Mr. Juber Mirza", code: "BTCS-601", link: "https://teams.microsoft.com/l/meetup-join/19%3a37cbfc140f9b44f98d3f91c35f49f547%40thread.tacv2/1628162346644?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"},  
                 {sid: "c", name: "Compiler Design", start: "12:45", end: "13:30", teacher: "Mr. Juber Mirza", code: "BTCS-601(P)", link: "https://teams.microsoft.com/l/meetup-join/19%3a1116e3a8f3244079be27874a97532531%40thread.tacv2/1628247868647?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%225f430052-b5da-4497-9b40-2b73bf8d6099%22%7d"},  
